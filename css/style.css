@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 30px;
+}
+button {
+    cursor: pointer;
+}
+#header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background-image: url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+#header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+}
+#header *{
+    z-index: 3;
+} 
+h1 span {
+    color: rgb(3, 228, 89);
+}
+#form {
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    min-width: 290px;
+    width: 100%;
+    max-width: 650px;
+}
+#inp { 
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    margin: 20px auto 5px;
+}
+#submit {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    outline: 0;
+    background: rgb(3, 228, 89);
+    border: 0;
+    color: #fff;
+}
+#result {
+    margin: 30px auto;
+    text-align: center;
+    width: 95%;
+    max-width: 620px;
+}
+.listen {
+    max-width: 200px;
+}
+#pagination {
+    text-align: center;
+}
+#loading {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: 0.2s;
+}
+#loading.hide {
+    transition: 0.2s;
+    opacity: 0;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style-type: none;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 4fr 1fr;
+    color: #333;
+}
+li p {
+    justify-self: start;
+    text-align: left;
+}
+.getLyrics {
+    background: rgb(255, 205, 42);
+    border-radius: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    max-width: 80px;
+}
+.page {
+    background: rgb(3, 228, 89);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    margin: 0 10px;
+}
+#reults i {
+    display: inline-block;
+    text-align: center;
+}
