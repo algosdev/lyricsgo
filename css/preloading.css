@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+.preload-cont {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(74, 255, 143);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.preload {
+  position: relative;
+  width: 240px;
+  height: 300px;
+}
+.algo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: filler 3s ease forwards 4.1s;
+}
+.s {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -68%);
+  animation: filler 3s ease forwards 4.1s;
+}
+.s path {
+  stroke-dasharray: 1034;
+  stroke-dashoffset: 1034;
+  animation: anime 1.8s ease forwards 2.3s;
+  stroke: #222;
+}
+.algo path:nth-child(1) {
+  stroke-dasharray: 370;
+  stroke: #222;
+  stroke-dashoffset: 370;
+  animation: anime 4s ease forwards 0.5s;
+}
+.algo path:nth-child(2) {
+  stroke-dasharray: 191;
+  stroke: #222;
+  stroke-dashoffset: 191;
+  animation: anime 4s ease forwards 0.8s;
+}
+.algo path:nth-child(3) {
+  stroke-dasharray: 496;
+  stroke: #222;
+  stroke-dashoffset: 496;
+  animation: anime 4s ease forwards 1.1s;
+}
+.algo path:nth-child(4) {
+  stroke-dasharray: 338;
+  stroke: #222;
+  stroke-dashoffset: 338;
+  animation: anime 4s ease forwards 1.4s;
+}
+.icon:nth-of-type(1) svg {
+  color: #222;
+  animation: 3s rotater linear infinite 7s;
+}
+.icon:nth-of-type(2) svg {
+  color: #222;
+  animation: 3s rotater-reverse linear infinite 7s;
+}
+.icon:nth-of-type(3) svg {
+  color: #222;
+  animation: 3s rotater-reverse linear infinite 7s;
+}
+.preload-cont .icon:nth-of-type(1) {
+  position: absolute;
+  top: 134px;
+  left: 37px;
+  opacity: 0;
+  transform: translate(0) rotate(0);
+  animation: 2s icon-1 ease forwards 6.1s;
+}
+.preload-cont .icon:nth-of-type(2) {
+  position: absolute;
+  top: 134px;
+  opacity: 0;
+  left: 121px;
+  transform: translate(0);
+  animation: 2s icon-2 ease forwards 6.1s;
+}
+.preload-cont .icon:nth-of-type(3) {
+  position: absolute;
+  top: 134px;
+  opacity: 0;
+  right: 37px;
+  transform: translate(0);
+  animation: 2s icon-3 ease forwards 6.1s;
+}
+@keyframes anime {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes filler {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: #222;
+  }
+  80% {
+    opacity: 1;
+    fill: #222;
+  }
+  100% {
+    opacity: 0;
+    fill: #222;
+  }
+}
+
+@keyframes icon-1 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(40px, -30px) scale(1.3);
+  }
+}
+@keyframes icon-2 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-7px, -40px);
+  }
+}
+@keyframes icon-3 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-62px, -8px) rotate(40deg);
+  }
+}
+@keyframes rotater {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotater-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
